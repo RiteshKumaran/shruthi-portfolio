@@ -61,7 +61,7 @@ const Banner = () => {
             <div className="w-52 h-52 relative hidden md:block">
               <img
                 className="absolute top-8 w-full h-full"
-                src="images/emoji.png"
+                src="/favicon.ico"
                 alt="emoji"
               />
             </div>
