@@ -18,8 +18,8 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="h-screen flex justify-center items-center  w-full">
-      <div className="flex  flex-col justify-end  px-4 py-2">
+    <div className="h-screen flex justify-center items-center rounded-md w-full">
+      <div className="flex   flex-col justify-end  px-4 py-2">
         <div className="my-6  text-Snow flex flex-col gap-y-5">
           <h1 className="text-2xl font-bold">Contact Information</h1>
 

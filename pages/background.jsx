@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { Skeleton } from "antd";
 import ParagraphSkeleton from "../components/Common/ParagraphSkeleton";
+import { motion } from "framer-motion";
 
 function Background() {
   const { isLoading, error, data } = useQuery("background", () =>
@@ -15,10 +16,35 @@ function Background() {
       .then(({ data }) => data)
       .catch((error) => console.error("Error fetching testimonials:", error))
   );
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      y: 100, // Start from below
+    },
+    in: {
+      opacity: 1,
+      y: 0, // Move to the middle of the screen
+    },
+    out: {
+      opacity: 0,
+      x: -100, // Move to the left of the screen
+    },
+  };
 
+  const pageTransition = {
+    duration: 0.5,
+    ease: "easeInOut",
+  };
   return (
     <BannerLayout>
-      <div className="grid md:grid-cols-2 md:divide-x-4 md:divide-Green px-4 pb-2 pt-10">
+      <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+        className="grid md:grid-cols-2 md:divide-x-4 md:divide-Green px-4 pb-2 pt-10"
+      >
         <div className="flex flex-col gap-y-4 order-2 md:order-1  md:mr-12">
           <div className="mt-10 md:mt-0 text-xl text-Snow font-semibold">
             Education
@@ -48,7 +74,7 @@ function Background() {
                 ))}
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </BannerLayout>
   );
