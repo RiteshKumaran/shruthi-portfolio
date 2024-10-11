@@ -47,7 +47,7 @@ const Intro = () => {
       transition={pageTransition}
     >
       {/* fixed at top */}
-      <div className="headerr z-50 absolute bg-MidNightBlack backdrop-blur-sm inset-y-0 h-48 top-0 flex items-center justify-center w-full flex-col px-4 gap-y-4">
+      <div className="headerr overflow-y-auto z-50 absolute bg-MidNightBlack backdrop-blur-sm inset-y-0 h-48 top-0 flex items-center justify-center w-full flex-col px-4 gap-y-4">
         <Image
           className="rounded-full w-20 h-20"
           src={Osama}
@@ -64,7 +64,10 @@ const Intro = () => {
       </div>
 
       {/* middle components */}
-      <motion.div className="beech z-20 flex flex-col overflow-y-scroll pt-48 top-48 space-y-6 divide-y divide-white overflow-x-hidden no-scrollbar px-4">
+      <motion.div
+        style={{ maxHeight: "calc(100vh - 25px)" }}
+        className="beech z-20 flex flex-col overflow-y-auto pt-48 top-48 space-y-6 divide-y divide-white overflow-x-hidden no-scrollbar px-4"
+      >
         <Location />
         <Languages />
         <Skills />

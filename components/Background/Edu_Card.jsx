@@ -9,7 +9,7 @@ const Edu_Card = ({ data }) => {
           <div className="flex-initial text-[17px] text-green-400 font-medium">
             {data.title}
           </div>
-          <div className="flex justify-items-center justify-center  text-LightGray bg-DeepNightBlack ml-2 w-36 lg:w-32 h-12 text-xs rounded-full py-3 font-normal opacity-50 text-center">
+          <div className="flex justify-items-center justify-center  text-LightGray bg-DeepNightBlack py-3 px-2 text-xs rounded-full  font-normal opacity-50 text-center">
             {" "}
             {data.year}{" "}
           </div>

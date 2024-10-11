@@ -51,7 +51,7 @@ const Portfolio = () => {
             ))
           : data?.map((data, key) => <PortfolioCard key={key} data={data} />)}
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </BannerLayout>
   );
 };

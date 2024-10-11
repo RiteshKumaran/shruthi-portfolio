@@ -39,7 +39,7 @@ export default function Layout({ children }) {
       </div>
       <div className="flex relative h-full justify-between gap-x-3">
         {/* left most side */}
-        <motion.div
+        <div
           // initial={{ x: -100, opacity: 0 }}
           // animate={{ x: 0, opacity: 1 }}
           // transition={{ duration: 0.5, delay: 0.5 }}
@@ -49,7 +49,7 @@ export default function Layout({ children }) {
           }`}
         >
           <Intro isOpen={intro} setIsOpen={setIntro} />
-        </motion.div>
+        </div>
         {/* overlay */}
         {intro && (
           <div

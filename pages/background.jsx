@@ -75,7 +75,7 @@ function Background() {
           </div>
         </div>
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </BannerLayout>
   );
 }

@@ -39,7 +39,7 @@ const home = () => {
       <MyExpertise />
       {/* <Recommendations /> */}
       {/* <ClientReviews /> */}
-      <Footer />
+      {/* <Footer /> */}
     </motion.div>
   );
 };
