@@ -18,7 +18,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Made with ❤️ by <span className="font-bold">Siteshh</span>
+            Made with ❤️ by <span className="font-bold">Shruthi</span>
           </a>
         </div>
         <div className="hidden md:flex items-center">
